@@ -34,6 +34,7 @@ crossorigin="anonymous">
     }
     .trending-image{
         height: 100px;
+        object-fit:cover;
     }
     .trending-item{
         float:left;
