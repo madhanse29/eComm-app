@@ -23,5 +23,18 @@ crossorigin="anonymous">
         height:500px;
         padding-top:100px
     }
+    .custom-slider{
+        height: 400px;
+    }
+    .custom-product{
+        height:600px;
+    }
+    .trending-image{
+        height: 100px;
+    }
+    .trending-item{
+        float:left;
+        width:20%;
+    }
 </style>
 </html>
