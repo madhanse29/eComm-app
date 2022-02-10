@@ -36,5 +36,11 @@ crossorigin="anonymous">
         float:left;
         width:20%;
     }
+    a{
+        text-decoration:none;
+    }
+    .detail-img{
+        height:200px;
+    }
 </style>
 </html>
