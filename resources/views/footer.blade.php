@@ -1,10 +1,5 @@
-<div class="card">
-  <div class="card-header">
-    Quote
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fixed bottom</a>
   </div>
-  <div class="card-footer">
-    <blockquote class="blockquote mb-0">
-   
-    </blockquote>
-  </div>
-</div>
+</nav>

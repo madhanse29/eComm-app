@@ -29,6 +29,9 @@ crossorigin="anonymous">
     .custom-product{
         height:600px;
     }
+    .custom-search{
+        height:900px;
+    }
     .trending-image{
         height: 100px;
     }
@@ -41,6 +44,12 @@ crossorigin="anonymous">
     }
     .detail-img{
         height:200px;
+    }
+    .search-box{
+        width: 500px !important
+    }
+    .searching-image{
+        height:150px
     }
 </style>
 </html>
