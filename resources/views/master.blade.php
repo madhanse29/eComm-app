@@ -27,7 +27,7 @@ crossorigin="anonymous">
         height: 400px;
     }
     .custom-product{
-        height:600px;
+        height:100vh;
     }
     .custom-search{
         height:900px;
@@ -51,6 +51,11 @@ crossorigin="anonymous">
     }
     .searching-image{
         height:150px
+    }
+    .cart-list-divider{
+        border-bottom : 1px solid;
+        margin-bottom : 20px ;
+        padding-bottom :20px;
     }
 </style>
 </html>
