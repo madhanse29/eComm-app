@@ -30,7 +30,7 @@ if(Session::has('user'))
         <button class="btn btn-outline-success text-light" type="submit">Search</button>
       </form>
       @if(Session::has('user'))
-      <li class="nav-item dropdown d-flex bg-dark rounded ms-2 text-light">
+      <li class="nav-item dropdown d-flex bg-secondary rounded ms-2 text-light">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           {{Session::get('user')['name']}}
           </a>

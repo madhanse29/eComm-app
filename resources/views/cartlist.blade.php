@@ -19,7 +19,7 @@
 
  </div>
  <div class="col-sm-3">
- <button class="btn btn-danger">Remove from cart</button>
+ <a class="btn btn-danger" href="/removecart/{{$item->cart_id}}">Remove from cart</a>
  </div>
  
     </div>
@@ -28,4 +28,4 @@
 </div>
 </div>
 </div>
-@endsection
+@endsection 
