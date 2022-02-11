@@ -4,10 +4,9 @@
     <div class="row">
 <div class="col-sm-10">
 <div class="trending-wrapper">
-    <h4>Result for products</h4>
-    <a href="/ordernow" class="btn btn-success">Order Now</a> <br><br>
+    <h4>My orders</h4>
     @csrf
-    @foreach($products as $item)
+    @foreach($orders as $item)
     <div class="row searched-item cart-list-divider">
  <div class="col-sm-3">
  <a href="detail/{{$item->id}}">
@@ -16,17 +15,17 @@
  </div>
  <div class="col-sm-4">
 
-    <h2>{{$item->name}}</h2>        
-    <h5>{{$item->description}}</h5>      
+    <h3>Name: {{$item->name}}</h3>        
+    <p>Delivery status: {{$item->status}}</p>      
+    <p>Addresss: {{$item->address}}</p>      
+    <p>Payment Status : {{$item->payment_status}}</p>      
+    <p>Payment Method : {{$item->payment_method}}</p>      
 
- </div>
- <div class="col-sm-3">
- <a class="btn btn-danger" href="/removecart/{{$item->cart_id}}">Remove from cart</a>
  </div>
  
     </div>
     @endforeach
-    <a href="/ordernow" class="btn btn-success">Order Now</a> 
+
 </div>
 </div>
 </div>
