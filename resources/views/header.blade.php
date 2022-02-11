@@ -33,9 +33,10 @@ if(Session::has('user'))
         <input class="form-control me-2 search-box" name="query" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success text-light" type="submit">Search</button>
       </form>
+     
       @if(Session::has('user'))
-      <li class="nav-item dropdown d-flex bg-secondary rounded ms-2 text-light">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <li class="nav-item dropdown d-flex bg-success rounded ms-2 text-white">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           {{Session::get('user')['name']}}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,8 +44,10 @@ if(Session::has('user'))
           </ul>
         </li>
         @else
-        <li><a href="/login">Login</a></li>
+        <a class="btn btn-success ms-2" href="/login">Login</a>
+     <a class="btn btn-success ms-2" href="/register">Register</a>
         @endif
+        
     </div>
  
 </nav>
