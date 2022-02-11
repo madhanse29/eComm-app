@@ -11,7 +11,7 @@ if(Session::has('user'))
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="/"><img src="https://pngimg.com/uploads/letter_e/letter_e_PNG7.png" alt="" width="30" height="30" class="d-inline-block align-text-top">-comm</a>
+    <a class="navbar-brand" href="/"><img src="https://pngimg.com/uploads/letter_e/letter_e_PNG7.png" alt="" width="30" height="30" class="d-inline-block align-items-center">-comm</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -49,6 +49,5 @@ if(Session::has('user'))
         @endif
         
     </div>
- 
 </nav>
 </div>
