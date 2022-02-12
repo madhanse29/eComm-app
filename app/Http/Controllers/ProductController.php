@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Artisan;
 use Session;
 use App\Models\Cart;
 use App\Models\Order;
@@ -14,8 +14,8 @@ class ProductController extends Controller
     //
     function index()
     {
-        $data=Product::all();
-        return view('product',['products'=>$data]);
+        $products=Product::all();
+        return view('product',compact('products'));
     }
 
     function detail($id){
@@ -53,6 +53,7 @@ $products=DB::table('cart')
 ->where('cart.user_id',$userId)
 ->select('products.*','cart.id as cart_id')
 ->get();
+// dd($products);
 return view('cartlist',['products'=>$products]);
     }
 function removeCart($id)
@@ -76,11 +77,12 @@ function orderPlace(Request $req)
 {
     $userId = Session::get('user')['id'];
    $allCart = Cart::where('user_id',$userId)->get();
+//    dd($allCart);
    foreach($allCart as $cart)
    {
      $order = new Order;
-     $order ->product_id=$cart['product_id'];
-     $order ->user_id=$cart['user_id'];
+     $order ->product_id=$cart->product_id;
+     $order ->user_id=$cart->user_id;
      $order ->status="pending";
      $order ->payment_method=$req->payment;
      $order ->payment_status='pending';
@@ -89,6 +91,7 @@ function orderPlace(Request $req)
      Cart::where('user_id',$userId)->delete();
    }
     $req->input();
+    Artisan::call('cache:clear');
     return redirect('/');
 }
 function myOrders ()

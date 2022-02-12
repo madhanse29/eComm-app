@@ -14,14 +14,11 @@ crossorigin="anonymous">
 
 </head>
 <body>
-    {{View::make('header')}}
+    @include('header')
     @yield('content')
     {{View::make('footer')}}
 </body>
 <style>
-    body{
-      height:100%
-    }
     .custom-login{
         height:500px;
         padding-top:100px
